@@ -51,6 +51,14 @@ COPY --from=frontend /app/dist /app/public
 
 COPY --from=backend /app/build /app/build
 
+ENV OPENAI_API_KEY=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
+ENV AUTH_SECRET_KEY=gangzigang
+
+
 EXPOSE 3002
 
 CMD ["pnpm", "run", "prod"]
+
+
+
+
